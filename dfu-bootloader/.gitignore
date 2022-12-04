@@ -1,0 +1,9 @@
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+*.lst
+*.map
+*.mem
+compare_lib
