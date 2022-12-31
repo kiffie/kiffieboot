@@ -3,7 +3,7 @@
 # build all kb3k USB DFU bootloader variants
 #
 
-CONFIGS="mx2xx-40mhz mx2xx-48mhz mx2x4-72mhz mx470-96mhz"
+CONFIGS="mx2xx-40mhz mx2xx-48mhz mx2x4-48mhz mx2x4-72mhz mx470-96mhz"
 OUT_DIR=../bin
 
 if [ ! -d $OUT_DIR ]; then
