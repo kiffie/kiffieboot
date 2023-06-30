@@ -65,7 +65,10 @@ MCU.
 The application can start the bootloader by writing the magic word 0x746f6f62
 into the SRAM and then resetting the MCU.
 
-This can be done in Rust like so:
+A Rust crate to start the bootloader and to provide an USB Device Firmware
+Upgrade (DFU) interface is in directory `kiffieboot-rs` of this repository.
+
+When not using this crate, the bootloader can be started in Rust like so:
 
 ```rust
 use mips_mcu::interrupt;
