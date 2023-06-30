@@ -6,6 +6,7 @@ description = "Runtime support for Kiffieboot"
 repository = "https://github.com/kiffie/kiffieboot"
 keywords = ["no-std", "mips", "pic32", "dfu", "bootloader"]
 license = "MIT OR Apache-2.0"
+include = ["README.md", "src"]
 
 [features]
 pic32mx2x0 = ["pic32mx2xx/pic32mx2xxfxxxb"]
@@ -23,3 +24,6 @@ usbd-dfu-rt = { version = "0.3.1", optional = true }
 pic32-hal = { version = "0.10.0", features = ["pic32mx2xxfxxxb", "usb-device"] }
 usb-device = "0.2.9"
 embedded-hal = "0.2.7"
+
+[package.metadata.docs.rs]
+features = ["pic32mx2x0"]

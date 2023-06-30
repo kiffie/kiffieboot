@@ -1,5 +1,8 @@
 # Runtime support for Kiffieboot kb3k bootloader including USB interface
 
+[![Crates.io](https://img.shields.io/crates/v/kiffieboot)](https://crates.io/crates/kiffieboot)
+[![docs.rs](https://img.shields.io/docsrs/kiffieboot)](https://docs.rs/kiffieboot)
+
 This crate can be used to start the bootloader or to provide an USB Device
 Firmware Upgrade (DFU) class interface. The DFU support is based on the
 `usbd-dfu-rt` crate.
