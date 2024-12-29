@@ -14,7 +14,7 @@
 //! # let pac = pac::Peripherals::take().unwrap();
 //! # use pic32_hal::time::U32Ext;
 //! # use pic32_hal::clock::Osc;
-//! # use embedded_hal::blocking::delay::DelayMs;
+//! # use embedded_hal::delay::DelayNs;
 //! let sysclock = 48_000_000_u32.hz();
 //! let clock = Osc::new(pac.OSC, sysclock);
 //! let mut timer = Delay::new(sysclock);
@@ -22,8 +22,10 @@
 //! let usb_bus = UsbBus::new(pac.USB);
 //! let mut dfu_runtime = DfuRuntimeClass::new(&usb_bus, Kiffieboot::default());
 //! let mut usb_dev = UsbDeviceBuilder::new(&usb_bus, UsbVidPid(0x16c0, 0x27dd))
-//!     .manufacturer("Some company")
-//!     .product("Some USB device")
+//!     .strings(&[StringDescriptors::new(LangID::EN)
+//!         .manufacturer("Some company")
+//!         .product("Some USB device")])
+//!     .unwrap()
 //!     .build();
 //!
 //! loop {
@@ -48,8 +50,6 @@
 
 #![no_std]
 
-#[cfg(feature = "log")]
-use log::info;
 use mips_mcu::interrupt;
 
 #[cfg(feature = "usbd-dfu-rt")]
