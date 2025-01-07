@@ -18,7 +18,7 @@ default = ["usbd-dfu-rt"]
 pic32mx2xx = { version = "0.7.0", optional = true }
 pic32mx470 = { version = "0.1.0", optional = true }
 mips-mcu = "0.3.0"
-usbd-dfu-rt = { git = "https://github.com/kiffie/usbd-dfu-rt.git", optional = true }
+usbd-dfu-rt = { version = "0.4.0", optional = true }
 
 [dev-dependencies]
 pic32-hal = { version = "0.13.0", features = ["pic32mx2xxfxxxb", "usb-device"] }
